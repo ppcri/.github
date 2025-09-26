@@ -1,0 +1,42 @@
+name: 🔀 Pull Request
+description: Submit code changes for review
+title: "[PR] "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What does this PR do and why?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: changes
+    attributes:
+      label: Type of Changes
+      options:
+        - label: Feature
+        - label: Bugfix
+        - label: Refactor
+        - label: Documentation
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing
+      description: How did you test this change?
+
+  - type: textarea
+    id: related
+    attributes:
+      label: Related Issues
+      description: Link issues with `Closes #123`.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Code follows style guidelines
+        - label: Tests added/updated
+        - label: Docs updated if relevant
